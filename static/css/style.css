@@ -1,0 +1,253 @@
+/* ===========================================================
+   Danish Khalid — Portfolio custom styles
+   Dark, modern, professional theme + animated cursor
+   =========================================================== */
+
+:root {
+    --bg:        #0a0e1a;   /* deep navy-black            */
+    --bg-soft:   #0f1525;   /* slightly lifted panels     */
+    --bg-card:   #131a2c;   /* cards                      */
+    --line:      #1e2742;   /* hairline borders           */
+    --text:      #e6e9f2;   /* primary text               */
+    --muted:     #9aa3bd;   /* secondary text             */
+    --indigo:    #818cf8;   /* "D" blue accent            */
+    --indigo-600:#6366f1;
+    --magenta:   #ec4899;   /* "K" magenta accent         */
+    --magenta-600:#db2777;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background:
+        radial-gradient(900px 600px at 15% -10%, rgba(99,102,241,.16), transparent 60%),
+        radial-gradient(800px 600px at 100% 10%, rgba(236,72,153,.14), transparent 55%),
+        var(--bg);
+    color: var(--text);
+}
+
+/* Gradient text used for headings / highlights */
+.text-gradient {
+    background: linear-gradient(100deg, var(--indigo) 0%, var(--magenta) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Animated gradient blob accents */
+.glow { filter: blur(70px); opacity: .55; }
+
+/* ---------- Hero animations ---------- */
+@keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-16px); }
+}
+.animate-float { animation: floaty 5s ease-in-out infinite; }
+
+@keyframes blobDrift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33%      { transform: translate(30px, -20px) scale(1.12); }
+    66%      { transform: translate(-20px, 18px) scale(0.92); }
+}
+.animate-blob       { animation: blobDrift 16s ease-in-out infinite; }
+.animate-blob.delay { animation: blobDrift 20s ease-in-out infinite; animation-delay: -6s; }
+
+/* Animated gradient text (continuous shimmer) */
+.text-gradient-animate {
+    background: linear-gradient(100deg, var(--indigo), var(--magenta), var(--indigo));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientMove 5s linear infinite;
+}
+@keyframes gradientMove { to { background-position: 200% center; } }
+
+/* Soft pulsing ring behind the hero logo card */
+@keyframes pulseRing {
+    0%, 100% { opacity: .45; transform: scale(1); }
+    50%      { opacity: .8;  transform: scale(1.06); }
+}
+.animate-pulse-ring { animation: pulseRing 4s ease-in-out infinite; }
+
+/* Bouncing scroll-down indicator */
+@keyframes scrollDot {
+    0%   { transform: translateY(0);   opacity: 0; }
+    40%  { opacity: 1; }
+    80%  { transform: translateY(14px); opacity: 0; }
+    100% { opacity: 0; }
+}
+.animate-scroll-dot { animation: scrollDot 1.8s ease-in-out infinite; }
+
+@keyframes bounceArrow {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(7px); }
+}
+.animate-bounce-arrow { animation: bounceArrow 1.8s ease-in-out infinite; }
+
+/* Name — continuous flowing colour gradient */
+.text-shine {
+    background: linear-gradient(110deg,
+        #e0e7ff, #818cf8, #ec4899, #f472b6, #818cf8, #e0e7ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shine 4s linear infinite;
+}
+@keyframes shine {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* "Hi there" accent line — gently grows/glows */
+@keyframes lineGrow {
+    0%, 100% { width: 2rem;   opacity: .55; }
+    50%      { width: 3.2rem; opacity: 1; }
+}
+.animate-line { animation: lineGrow 2.6s ease-in-out infinite; }
+
+/* Primary button — soft pulsing glow */
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 10px 25px -6px rgba(99, 102, 241, .45); }
+    50%      { box-shadow: 0 12px 36px -4px rgba(236, 72, 153, .6); }
+}
+.animate-glow { animation: glowPulse 3s ease-in-out infinite; }
+
+/* Buttons — light sweep on hover */
+.btn-shine { position: relative; overflow: hidden; }
+.btn-shine::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .35), transparent);
+    transform: skewX(-20deg);
+    transition: left .6s ease;
+    pointer-events: none;
+}
+.btn-shine:hover::before { left: 130%; }
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-float, .animate-blob, .animate-blob.delay, .text-gradient-animate,
+    .animate-pulse-ring, .animate-scroll-dot, .animate-bounce-arrow,
+    .text-shine, .animate-line, .animate-glow {
+        animation: none !important;
+    }
+    .btn-shine::before { display: none; }
+}
+
+/* Section heading underline */
+.heading-rule {
+    height: 4px; width: 64px; border-radius: 9999px;
+    background: linear-gradient(90deg, var(--indigo), var(--magenta));
+}
+
+/* ---------- Back to top button ---------- */
+#back-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(14px);
+    transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+}
+#back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ---------- Navbar scroll state ---------- */
+#site-nav.scrolled {
+    background: rgba(10, 14, 26, .8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+}
+
+/* ---------- Glass card ---------- */
+.glass {
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+    border: 1px solid var(--line);
+    transition: transform .35s cubic-bezier(.2,.7,.3,1), border-color .35s, box-shadow .35s;
+}
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(129,140,248,.5);
+    box-shadow: 0 20px 40px -20px rgba(99,102,241,.45);
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);
+    will-change: opacity, transform;
+}
+.reveal.visible { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: .08s; }
+.reveal.d2 { transition-delay: .16s; }
+.reveal.d3 { transition-delay: .24s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+}
+
+/* ---------- Custom animated cursor (desktop / fine pointer only) ---------- */
+.cursor-dot,
+.cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 9999px;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+.cursor-dot {
+    width: 7px; height: 7px;
+    background: #fff;
+}
+.cursor-ring {
+    width: 36px; height: 36px;
+    border: 2px solid rgba(255, 255, 255, .6);
+    transition: width .25s ease, height .25s ease,
+                background-color .25s ease, border-color .25s ease, opacity .25s ease;
+}
+.cursor-ring.is-hovering {
+    width: 60px; height: 60px;
+    background: rgba(255, 255, 255, .15);
+    border-color: rgba(255, 255, 255, .9);
+}
+.cursor-ring.is-down { width: 28px; height: 28px; }
+
+/* Hide custom cursor + restore native one on touch / coarse pointers */
+@media (pointer: fine) {
+    body { cursor: none; }
+    a, button, input, textarea, select, label { cursor: none; }
+}
+@media (hover: none), (pointer: coarse) {
+    .cursor-dot, .cursor-ring { display: none !important; }
+}
+
+/* Nice focus ring for accessibility (keyboard users) */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--indigo);
+    outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--indigo-600), var(--magenta-600));
+    border-radius: 9999px;
+    border: 3px solid var(--bg);
+}
