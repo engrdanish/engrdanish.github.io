@@ -4,12 +4,12 @@
    =========================================================== */
 
 :root {
-    --bg:        #0a0e1a;   /* deep navy-black            */
-    --bg-soft:   #0f1525;   /* slightly lifted panels     */
-    --bg-card:   #131a2c;   /* cards                      */
-    --line:      #1e2742;   /* hairline borders           */
-    --text:      #e6e9f2;   /* primary text               */
-    --muted:     #9aa3bd;   /* secondary text             */
+    --bg:        #131a2e;   /* professional slate-navy    */
+    --bg-soft:   #1a2440;   /* slightly lifted panels     */
+    --bg-card:   #1f2a48;   /* cards                      */
+    --line:      #2e3b5c;   /* hairline borders           */
+    --text:      #eef1fa;   /* primary text               */
+    --muted:     #aab4ce;   /* secondary text             */
     --indigo:    #818cf8;   /* "D" blue accent            */
     --indigo-600:#6366f1;
     --magenta:   #ec4899;   /* "K" magenta accent         */
@@ -167,7 +167,7 @@ body {
 
 /* ---------- Navbar scroll state ---------- */
 #site-nav.scrolled {
-    background: rgba(10, 14, 26, .8);
+    background: rgba(19, 26, 46, .85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
