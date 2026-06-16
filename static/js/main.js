@@ -119,6 +119,22 @@
         }
     }
 
+    /* ---------------- Skill bars fill on scroll ---------------- */
+    const bars = document.querySelectorAll('.skill-bar');
+    if (bars.length && 'IntersectionObserver' in window) {
+        const bObs = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) {
+                    e.target.style.width = e.target.dataset.width || '0';
+                    bObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        bars.forEach((b) => bObs.observe(b));
+    } else {
+        bars.forEach((b) => { b.style.width = b.dataset.width || '0'; });
+    }
+
     /* ---------------- Animated stat counters ---------------- */
     const counters = document.querySelectorAll('.stat-count');
     if (counters.length && 'IntersectionObserver' in window) {
