@@ -96,4 +96,52 @@
         toggleTop();
         window.addEventListener('scroll', toggleTop, { passive: true });
     }
+
+    /* ---------------- Typewriter (cycling roles) ---------------- */
+    const typed = document.getElementById('typed-role');
+    if (typed && typed.dataset.roles) {
+        const roles = typed.dataset.roles.split(',').map((r) => r.trim()).filter(Boolean);
+        if (roles.length) {
+            let ri = 0, ci = 0, deleting = false;
+            typed.textContent = '';
+            const tick = () => {
+                const word = roles[ri];
+                typed.textContent = word.slice(0, ci);
+                if (!deleting) {
+                    if (ci < word.length) { ci++; setTimeout(tick, 90); }
+                    else { deleting = true; setTimeout(tick, 1600); }      // pause at full word
+                } else {
+                    if (ci > 0) { ci--; setTimeout(tick, 45); }
+                    else { deleting = false; ri = (ri + 1) % roles.length; setTimeout(tick, 350); }
+                }
+            };
+            setTimeout(tick, 600);
+        }
+    }
+
+    /* ---------------- Animated stat counters ---------------- */
+    const counters = document.querySelectorAll('.stat-count');
+    if (counters.length && 'IntersectionObserver' in window) {
+        const runCount = (el) => {
+            const target = parseInt(el.dataset.target, 10) || 0;
+            const duration = 1400;
+            const start = performance.now();
+            const step = (now) => {
+                const p = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - p, 3);          // ease-out
+                el.textContent = Math.round(eased * target);
+                if (p < 1) requestAnimationFrame(step);
+                else el.textContent = target;
+            };
+            requestAnimationFrame(step);
+        };
+        const cObs = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) { runCount(e.target); cObs.unobserve(e.target); }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach((c) => cObs.observe(c));
+    } else {
+        counters.forEach((c) => { c.textContent = c.dataset.target; });
+    }
 })();

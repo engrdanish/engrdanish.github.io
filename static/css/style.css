@@ -101,6 +101,10 @@ body {
     100% { background-position: 200% center; }
 }
 
+/* Typewriter cursor blink */
+.typed-cursor { animation: caretBlink 1s step-end infinite; }
+@keyframes caretBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
 /* "Hi there" accent line — gently grows/glows */
 @keyframes lineGrow {
     0%, 100% { width: 2rem;   opacity: .55; }

@@ -60,6 +60,7 @@
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
                 <a href="#about" class="hover:text-white transition relative">About</a>
                 <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#achievements" class="hover:text-white transition">Achievements</a>
                 <a href="#projects" class="hover:text-white transition">Projects</a>
                 <a href="#skills" class="hover:text-white transition">Skills</a>
                 <a href="#contact" class="px-5 py-2.5 rounded-full font-semibold text-white
@@ -79,6 +80,7 @@
         <div id="mobile-menu" class="hidden md:hidden pb-5 flex-col gap-4 text-sm font-medium text-slate-300">
             <a href="#about" class="hover:text-white">About</a>
             <a href="#experience" class="hover:text-white">Experience</a>
+            <a href="#achievements" class="hover:text-white">Achievements</a>
             <a href="#projects" class="hover:text-white">Projects</a>
             <a href="#skills" class="hover:text-white">Skills</a>
             <a href="#contact" class="hover:text-white">Contact</a>
@@ -97,14 +99,20 @@
 
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center w-full">
         <div>
-            <p class="reveal inline-flex items-center gap-2 text-sm font-medium text-indigo-400 mb-5">
-                <span class="h-px bg-indigo-400 animate-line"></span> Hi there, I'm
-            </p>
+            <div class="reveal mb-5 flex flex-wrap items-center gap-3">
+                <span class="inline-flex items-center gap-2 text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-3 py-1.5">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span></span>
+                    Available for new projects
+                </span>
+                <span class="inline-flex items-center gap-2 text-sm font-medium text-indigo-400">
+                    <span class="h-px w-8 bg-indigo-400 animate-line"></span> Hi there, I'm
+                </span>
+            </div>
             <h1 class="reveal d1 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-shine">
                 Danish Khalid
             </h1>
-            <p class="reveal d2 mt-5 text-xl sm:text-2xl font-medium text-gradient-animate inline-block">
-                Senior Odoo Developer | Python Developer
+            <p class="reveal d2 mt-5 text-xl sm:text-2xl font-medium">
+                <span id="typed-role" class="text-gradient-animate" data-roles="Senior Odoo Developer,Python Developer,Django Developer,ERP Specialist">Senior Odoo Developer | Python Developer</span><span class="typed-cursor text-magenta-400 font-light">|</span>
             </p>
             <div class="reveal d3 mt-9 flex flex-wrap gap-4">
                 <a href="#projects" class="btn-shine animate-glow px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-indigo-500 to-magenta-500 hover:opacity-90 transition hover:-translate-y-0.5">View My Work</a>
@@ -120,11 +128,35 @@
             
         </div>
         <div class="reveal d2 flex justify-center md:justify-end">
-            <div class="relative animate-float">
-                <div class="absolute -inset-6 rounded-full bg-gradient-to-br from-indigo-500/30 to-magenta-500/30 blur-2xl animate-pulse-ring"></div>
-                <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-3xl card flex items-center justify-center p-10">
-                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/10 to-magenta-500/10"></div>
-                    <img src="static/img/logo.png" alt="Danish Khalid" class="relative w-full h-full object-contain drop-shadow-2xl">
+            <div class="relative animate-float w-full max-w-sm">
+                <div class="absolute -inset-4 rounded-3xl bg-gradient-to-br from-indigo-500/25 to-magenta-500/25 blur-2xl animate-pulse-ring"></div>
+                <div class="relative card rounded-3xl p-7 text-center">
+                    <div class="w-28 h-28 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500/15 to-magenta-500/15 border border-ink-600 flex items-center justify-center p-3">
+                        <img src="static/img/logo.png" alt="Danish Khalid" class="w-full h-full object-contain drop-shadow">
+                    </div>
+                    <h3 class="mt-4 font-display font-bold text-white text-lg">Danish Khalid</h3>
+                    <p class="text-magenta-300 text-sm">Senior Odoo Developer</p>
+
+                    <div class="mt-6 grid grid-cols-3 gap-2 border-t border-ink-600 pt-6">
+                        <div>
+                            <div class="font-display text-2xl font-bold text-white"><span class="stat-count" data-target="7">0</span>+</div>
+                            <div class="text-[11px] text-slate-400 mt-1">Years Exp</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-2xl font-bold text-white"><span class="stat-count" data-target="10">0</span>+</div>
+                            <div class="text-[11px] text-slate-400 mt-1">Projects</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-2xl font-bold text-white"><span class="stat-count" data-target="6">0</span>+</div>
+                            <div class="text-[11px] text-slate-400 mt-1">Clients</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap justify-center gap-2">
+                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Odoo</span>
+                        <span class="text-xs font-medium bg-magenta-500/10 text-magenta-300 px-3 py-1 rounded-full border border-magenta-500/20">Python</span>
+                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Django</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -350,6 +382,48 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
                 </div>
             </div>
             
+        </div>
+    </div>
+</section>
+
+
+<section id="achievements" class="py-24 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center">
+            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-400">Highlights</p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mt-2">Key <span class="text-gradient">Achievements</span></h2>
+            <div class="reveal heading-rule mx-auto mt-4 mb-14"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+            <div class="reveal card rounded-2xl p-6 flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-2xl">🏆</div>
+                <div>
+                    <h4 class="font-semibold text-white">Enterprise ERP Deployments</h4>
+                    <p class="text-slate-400 text-sm mt-1 leading-relaxed">Led end-to-end Odoo ERP customization &amp; deployment for high-profile ISP/Telecom and Retail clients.</p>
+                </div>
+            </div>
+            <div class="reveal d1 card rounded-2xl p-6 flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 rounded-xl bg-magenta-500/15 border border-magenta-500/30 flex items-center justify-center text-2xl">👥</div>
+                <div>
+                    <h4 class="font-semibold text-white">Team Lead &amp; Mentor</h4>
+                    <p class="text-slate-400 text-sm mt-1 leading-relaxed">Acted as Senior Developer / Team Lead — mentoring developers and ensuring on-time project delivery.</p>
+                </div>
+            </div>
+            <div class="reveal card rounded-2xl p-6 flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-2xl">🔗</div>
+                <div>
+                    <h4 class="font-semibold text-white">eCommerce Integrations</h4>
+                    <p class="text-slate-400 text-sm mt-1 leading-relaxed">Built seamless Shopify &amp; WooCommerce ↔ Odoo synchronization for orders, inventory and customers.</p>
+                </div>
+            </div>
+            <div class="reveal d1 card rounded-2xl p-6 flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 rounded-xl bg-magenta-500/15 border border-magenta-500/30 flex items-center justify-center text-2xl">🎓</div>
+                <div>
+                    <h4 class="font-semibold text-white">Computer Engineering Graduate</h4>
+                    <p class="text-slate-400 text-sm mt-1 leading-relaxed">Bachelor's Degree in Computer Engineering from Bahria University, Karachi.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -643,7 +717,7 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
         
 
         <form method="post" action="/#contact" class="reveal d1 space-y-5 glass rounded-2xl p-6 sm:p-8">
-            <input type="hidden" name="csrfmiddlewaretoken" value="i9w61hGydAV8dtCYZpsJlrsR5MC7XfKpqnf0Cnb2cmeoavkqixFJOYVETMntenzz">
+            <input type="hidden" name="csrfmiddlewaretoken" value="S9RhzESmjnLCFGJ1zUOrzYSRLasPc79QTqaiZU5CP17zPMSeWTzwtgx7SteEifvm">
             <div class="grid sm:grid-cols-2 gap-5">
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-1.5" for="id_name">Name</label>
@@ -698,16 +772,11 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var d = new FormData(form);
-    var subject = encodeURIComponent(d.get('subject') || 'Portfolio enquiry');
-    var body = encodeURIComponent(
-      'Name: ' + (d.get('name') || '') +
-      '\nEmail: ' + (d.get('email') || '') +
-      '\n\n' + (d.get('message') || '')
-    );
-    window.location.href = 'mailto:engr.danishkhalid@gmail.com?subject=' + subject + '&body=' + body;
+    var s = encodeURIComponent(d.get('subject') || 'Portfolio enquiry');
+    var b = encodeURIComponent('Name: '+(d.get('name')||'')+String.fromCharCode(10)+'Email: '+(d.get('email')||'')+String.fromCharCode(10)+String.fromCharCode(10)+(d.get('message')||''));
+    window.location.href = 'mailto:engr.danishkhalid@gmail.com?subject='+s+'&body='+b;
   });
 })();
 </script>
-
 </body>
 </html>
