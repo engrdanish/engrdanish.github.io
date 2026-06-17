@@ -21,7 +21,7 @@
             theme: {
                 extend: {
                     colors: {
-                        ink:     { 900: '#0d1f38', 800: '#142a48', 700: '#173255', 600: '#284a73' },
+                        ink:     { 900: '#ffffff', 800: '#eef3fb', 700: '#f1f5f9', 600: '#e2e8f0' },
                         indigo:  { 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb' },
                         magenta: { 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7' },
                     },
@@ -48,28 +48,28 @@
 
     
 <header id="site-nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300
-        border-b border-transparent [&.scrolled]:border-ink-600 [&.scrolled]:bg-ink-900/80 [&.scrolled]:backdrop-blur-lg">
+        border-b border-transparent [&.scrolled]:border-slate-200 [&.scrolled]:bg-white/80 [&.scrolled]:backdrop-blur-lg">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-20">
             <a href="#hero" class="flex items-center group">
                 <img src="static/img/logo.png" alt="Danish Khalid"
-                     class="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                     class="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
             </a>
 
             <!-- Desktop nav -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-white transition relative">About</a>
-                <a href="#experience" class="hover:text-white transition">Experience</a>
-                <a href="#achievements" class="hover:text-white transition">Achievements</a>
-                <a href="#projects" class="hover:text-white transition">Projects</a>
-                <a href="#skills" class="hover:text-white transition">Skills</a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-slate-900 transition relative">About</a>
+                <a href="#experience" class="hover:text-slate-900 transition">Experience</a>
+                <a href="#achievements" class="hover:text-slate-900 transition">Achievements</a>
+                <a href="#projects" class="hover:text-slate-900 transition">Projects</a>
+                <a href="#skills" class="hover:text-slate-900 transition">Skills</a>
                 <a href="#contact" class="px-5 py-2.5 rounded-full font-semibold text-white
                           bg-gradient-to-r from-indigo-500 to-magenta-500 hover:opacity-90
                           shadow-lg shadow-indigo-500/25 transition">Contact</a>
             </div>
 
             <!-- Mobile toggle -->
-            <button id="menu-toggle" class="md:hidden p-2 text-slate-200" aria-label="Toggle menu">
+            <button id="menu-toggle" class="md:hidden p-2 text-slate-700" aria-label="Toggle menu">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -77,13 +77,13 @@
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden pb-5 flex-col gap-4 text-sm font-medium text-slate-300">
-            <a href="#about" class="hover:text-white">About</a>
-            <a href="#experience" class="hover:text-white">Experience</a>
-            <a href="#achievements" class="hover:text-white">Achievements</a>
-            <a href="#projects" class="hover:text-white">Projects</a>
-            <a href="#skills" class="hover:text-white">Skills</a>
-            <a href="#contact" class="hover:text-white">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden pb-5 flex-col gap-4 text-sm font-medium text-slate-600">
+            <a href="#about" class="hover:text-slate-900">About</a>
+            <a href="#experience" class="hover:text-slate-900">Experience</a>
+            <a href="#achievements" class="hover:text-slate-900">Achievements</a>
+            <a href="#projects" class="hover:text-slate-900">Projects</a>
+            <a href="#skills" class="hover:text-slate-900">Skills</a>
+            <a href="#contact" class="hover:text-slate-900">Contact</a>
         </div>
     </nav>
 </header>
@@ -101,12 +101,12 @@
         <div>
             <div class="reveal mb-5 flex flex-wrap items-center gap-3">
                 
-                <span class="inline-flex items-center gap-2 text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-3 py-1.5">
+                <span class="inline-flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-3 py-1.5">
                     <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span></span>
                     Available for new projects
                 </span>
                 
-                <span class="inline-flex items-center gap-2 text-sm font-medium text-indigo-400">
+                <span class="inline-flex items-center gap-2 text-sm font-medium text-indigo-600">
                     <span class="h-px w-8 bg-indigo-400 animate-line"></span> Hi there, I'm
                 </span>
             </div>
@@ -114,18 +114,18 @@
                 Danish Khalid
             </h1>
             <p class="reveal d2 mt-5 text-xl sm:text-2xl font-medium">
-                <span id="typed-role" class="text-gradient-animate" data-roles="Senior Odoo Developer, Python Developer, Django Developer, ERP Specialist">Senior Odoo Developer | Python Developer</span><span class="typed-cursor text-magenta-400 font-light">|</span>
+                <span id="typed-role" class="text-gradient-animate" data-roles="Senior Odoo Developer, Python Developer, Django Developer, ERP Specialist">Senior Odoo Developer | Python Developer</span><span class="typed-cursor text-magenta-600 font-light">|</span>
             </p>
             <div class="reveal d3 mt-9 flex flex-wrap gap-4">
                 <a href="#projects" class="btn-shine animate-glow px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-indigo-500 to-magenta-500 hover:opacity-90 transition hover:-translate-y-0.5">View My Work</a>
-                <a href="#contact" class="btn-shine px-6 py-3 rounded-full font-semibold text-slate-200 border border-ink-600 hover:border-indigo-400 hover:text-white transition hover:-translate-y-0.5">Get in Touch</a>
+                <a href="#contact" class="btn-shine px-6 py-3 rounded-full font-semibold text-slate-700 border border-slate-200 hover:border-indigo-400 hover:text-slate-900 transition hover:-translate-y-0.5">Get in Touch</a>
                 
             </div>
             
-            <div class="reveal d3 mt-9 flex gap-5 text-slate-400">
+            <div class="reveal d3 mt-9 flex gap-5 text-slate-500">
                 
-                <a href="https://www.linkedin.com/in/engrdanishkhalid/" target="_blank" rel="noopener" class="hover:text-indigo-400 transition" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7.1 20.4H3.6V9h3.5v11.4zM5.3 7.4a2 2 0 110-4 2 2 0 010 4zm15.1 13H17V14.9c0-1.3 0-3-1.8-3-1.8 0-2.1 1.4-2.1 2.9v5.6H9.6V9h3.4v1.6h.05c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.1 2.3 4.1 5.3v6.3z"/></svg></a>
-                <a href="mailto:engr.danishkhalid@gmail.com" class="hover:text-magenta-400 transition" aria-label="Email"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+                <a href="https://www.linkedin.com/in/engrdanishkhalid/" target="_blank" rel="noopener" class="hover:text-indigo-600 transition" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7.1 20.4H3.6V9h3.5v11.4zM5.3 7.4a2 2 0 110-4 2 2 0 010 4zm15.1 13H17V14.9c0-1.3 0-3-1.8-3-1.8 0-2.1 1.4-2.1 2.9v5.6H9.6V9h3.4v1.6h.05c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.1 2.3 4.1 5.3v6.3z"/></svg></a>
+                <a href="mailto:engr.danishkhalid@gmail.com" class="hover:text-magenta-600 transition" aria-label="Email"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
             </div>
             
         </div>
@@ -133,35 +133,35 @@
             <div class="relative animate-float w-full max-w-sm">
                 <div class="absolute -inset-4 rounded-3xl bg-gradient-to-br from-indigo-500/25 to-magenta-500/25 blur-2xl animate-pulse-ring"></div>
                 <div class="relative card rounded-3xl p-7 text-center">
-                    <div class="w-28 h-28 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500/15 to-magenta-500/15 border border-ink-600 flex items-center justify-center p-3">
+                    <div class="w-28 h-28 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500/15 to-magenta-500/15 border border-slate-200 flex items-center justify-center p-3">
                         <img src="static/img/logo-mark.png" alt="Danish Khalid" class="w-full h-full object-contain drop-shadow">
                     </div>
-                    <h3 class="mt-4 font-display font-bold text-white text-lg">Danish Khalid</h3>
-                    <p class="text-magenta-300 text-sm">Senior Odoo Developer</p>
+                    <h3 class="mt-4 font-display font-bold text-slate-900 text-lg">Danish Khalid</h3>
+                    <p class="text-magenta-700 text-sm">Senior Odoo Developer</p>
 
-                    <div class="mt-6 grid grid-cols-3 gap-2 border-t border-ink-600 pt-6">
+                    <div class="mt-6 grid grid-cols-3 gap-2 border-t border-slate-200 pt-6">
                         <div>
-                            <div class="font-display text-2xl font-bold text-white"><span class="stat-count" data-target="7">0</span>+</div>
-                            <div class="text-[11px] text-slate-400 mt-1">Years Exp</div>
+                            <div class="font-display text-2xl font-bold text-slate-900"><span class="stat-count" data-target="7">0</span>+</div>
+                            <div class="text-[11px] text-slate-500 mt-1">Years Exp</div>
                         </div>
                         <div>
-                            <div class="font-display text-2xl font-bold text-white"><span class="stat-count" data-target="20">0</span>+</div>
-                            <div class="text-[11px] text-slate-400 mt-1">Projects</div>
+                            <div class="font-display text-2xl font-bold text-slate-900"><span class="stat-count" data-target="20">0</span>+</div>
+                            <div class="text-[11px] text-slate-500 mt-1">Projects</div>
                         </div>
                         <div>
-                            <div class="font-display text-2xl font-bold text-white"><span class="stat-count" data-target="10">0</span>+</div>
-                            <div class="text-[11px] text-slate-400 mt-1">Clients</div>
+                            <div class="font-display text-2xl font-bold text-slate-900"><span class="stat-count" data-target="10">0</span>+</div>
+                            <div class="text-[11px] text-slate-500 mt-1">Clients</div>
                         </div>
                     </div>
 
                     
                     <div class="mt-6 flex flex-wrap justify-center gap-2">
                         
-                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 border-indigo-500/20 px-3 py-1 rounded-full border">Odoo</span>
+                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 border-indigo-500/20 px-3 py-1 rounded-full border">Odoo</span>
                         
-                        <span class="text-xs font-medium bg-magenta-500/10 text-magenta-300 border-magenta-500/20 px-3 py-1 rounded-full border">Python</span>
+                        <span class="text-xs font-medium bg-magenta-500/10 text-magenta-700 border-magenta-500/20 px-3 py-1 rounded-full border">Python</span>
                         
-                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 border-indigo-500/20 px-3 py-1 rounded-full border">Django</span>
+                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 border-indigo-500/20 px-3 py-1 rounded-full border">Django</span>
                         
                     </div>
                     
@@ -171,7 +171,7 @@
     </div>
 
     <!-- Scroll-down indicator -->
-    <a href="#about" aria-label="Scroll down" class="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-slate-500 hover:text-indigo-400 transition group">
+    <a href="#about" aria-label="Scroll down" class="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-slate-500 hover:text-indigo-600 transition group">
         <span class="text-xs tracking-widest uppercase">Scroll</span>
         <span class="w-6 h-10 rounded-full border-2 border-current flex justify-center pt-2">
             <span class="w-1.5 h-1.5 rounded-full bg-current animate-scroll-dot"></span>
@@ -185,26 +185,26 @@
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="reveal font-display text-3xl sm:text-4xl font-bold">About <span class="text-gradient">Me</span></h2>
         <div class="reveal heading-rule mx-auto mt-4 mb-10"></div>
-        <p class="reveal d1 text-lg text-slate-400 leading-relaxed whitespace-pre-line">
+        <p class="reveal d1 text-lg text-slate-500 leading-relaxed whitespace-pre-line">
             Senior Odoo Developer and Python engineer with 7+ years of experience designing, customizing, and deploying end-to-end ERP solutions across the ISP/Telecom, Retail, and eCommerce sectors. I specialise in building custom Odoo add-ons, RESTful APIs, and third-party integrations (Shopify, WooCommerce), with deep expertise in Python, Django, and PostgreSQL.
 
 As a team lead and senior developer, I mentor engineers, optimise application performance through query tuning and caching, and deliver scalable solutions aligned with business-critical workflows and client timelines.
         </p>
         
         <div class="reveal d2 mt-10 flex flex-wrap justify-center gap-4">
-            <span class="glass rounded-full px-5 py-2.5 inline-flex items-center gap-2 text-slate-300"><svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.7 16.7A8 8 0 106.3 16.7l5.7 5.7 5.7-5.7z"/><circle cx="12" cy="11" r="3"/></svg>Lahore, Pakistan</span>
-            <a href="mailto:engr.danishkhalid@gmail.com" class="glass rounded-full px-5 py-2.5 inline-flex items-center gap-2 text-slate-300 hover:text-white transition"><svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>engr.danishkhalid@gmail.com</a>
-            <span class="glass rounded-full px-5 py-2.5 inline-flex items-center gap-2 text-slate-300"><svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2l2 5-2 1a11 11 0 005 5l1-2 5 2v2a2 2 0 01-2 2A16 16 0 013 5z"/></svg>+92 315 4693064</span>
+            <span class="glass rounded-full px-5 py-2.5 inline-flex items-center gap-2 text-slate-600"><svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.7 16.7A8 8 0 106.3 16.7l5.7 5.7 5.7-5.7z"/><circle cx="12" cy="11" r="3"/></svg>Lahore, Pakistan</span>
+            <a href="mailto:engr.danishkhalid@gmail.com" class="glass rounded-full px-5 py-2.5 inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition"><svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>engr.danishkhalid@gmail.com</a>
+            <span class="glass rounded-full px-5 py-2.5 inline-flex items-center gap-2 text-slate-600"><svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2l2 5-2 1a11 11 0 005 5l1-2 5 2v2a2 2 0 01-2 2A16 16 0 013 5z"/></svg>+92 315 4693064</span>
         </div>
         
     </div>
 </section>
 
 
-<section id="experience" class="py-24 px-4 sm:px-6 bg-ink-800/40 border-t border-ink-600">
+<section id="experience" class="py-24 px-4 sm:px-6 bg-slate-50 border-t border-slate-200">
     <div class="max-w-5xl mx-auto">
         <div class="text-center">
-            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-400">Career Path</p>
+            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-600">Career Path</p>
             <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mt-2">Work <span class="text-gradient">Experience</span></h2>
             <div class="reveal heading-rule mx-auto mt-4 mb-16"></div>
         </div>
@@ -216,19 +216,19 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             
             <div class="reveal relative mb-10 md:mb-12 md:flex md:items-center md:flex-row-reverse">
                 <!-- node -->
-                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-ink-900 z-10"></span>
+                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-white z-10"></span>
                 <!-- spacer (desktop) -->
                 <div class="hidden md:block md:w-1/2"></div>
                 <!-- card -->
                 <div class="ml-12 md:ml-0 md:w-1/2 md:px-8">
                     <div class="card rounded-2xl p-5 sm:p-6">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-300 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Aug 2024 – Present</span>
-                            <span class="text-xs font-semibold text-emerald-300 bg-emerald-500/10 border border-emerald-500/25 rounded-full px-2.5 py-1">Current</span>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-700 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Aug 2024 – Present</span>
+                            <span class="text-xs font-semibold text-emerald-600 bg-emerald-500/10 border border-emerald-500/25 rounded-full px-2.5 py-1">Current</span>
                         </div>
-                        <h4 class="font-semibold text-white text-lg">Senior Odoo Developer</h4>
-                        <p class="text-magenta-300 text-sm font-medium">Trionex Pvt Ltd <span class="text-slate-500">· Lahore, Pakistan</span></p>
-                        <p class="mt-3 text-slate-400 text-sm leading-relaxed whitespace-pre-line">• Led end-to-end customization and deployment of Odoo ERP solutions for high-profile clients in the ISP/Telecom and Retail sectors.
+                        <h4 class="font-semibold text-slate-900 text-lg">Senior Odoo Developer</h4>
+                        <p class="text-magenta-700 text-sm font-medium">Trionex Pvt Ltd <span class="text-slate-500">· Lahore, Pakistan</span></p>
+                        <p class="mt-3 text-slate-500 text-sm leading-relaxed whitespace-pre-line">• Led end-to-end customization and deployment of Odoo ERP solutions for high-profile clients in the ISP/Telecom and Retail sectors.
 • Designed and developed custom Odoo add-ons and RESTful APIs for billing, inventory, POS, and integrated employee portals.
 • Acted as Team Lead/Senior Developer — mentoring developers, managing deliveries, and ensuring projects met client objectives and timelines.</p>
                     </div>
@@ -237,19 +237,19 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             
             <div class="reveal relative mb-10 md:mb-12 md:flex md:items-center ">
                 <!-- node -->
-                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-ink-900 z-10"></span>
+                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-white z-10"></span>
                 <!-- spacer (desktop) -->
                 <div class="hidden md:block md:w-1/2"></div>
                 <!-- card -->
                 <div class="ml-12 md:ml-0 md:w-1/2 md:px-8">
                     <div class="card rounded-2xl p-5 sm:p-6">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-300 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Sep 2023 – Oct 2024</span>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-700 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Sep 2023 – Oct 2024</span>
                             
                         </div>
-                        <h4 class="font-semibold text-white text-lg">Senior Odoo Developer</h4>
-                        <p class="text-magenta-300 text-sm font-medium">WADIC <span class="text-slate-500">· Lahore, Pakistan</span></p>
-                        <p class="mt-3 text-slate-400 text-sm leading-relaxed whitespace-pre-line">• Integrated Odoo with Shopify and WooCommerce using custom synchronization scripts for seamless bidirectional data flow of orders, inventory, and customers.
+                        <h4 class="font-semibold text-slate-900 text-lg">Senior Odoo Developer</h4>
+                        <p class="text-magenta-700 text-sm font-medium">WADIC <span class="text-slate-500">· Lahore, Pakistan</span></p>
+                        <p class="mt-3 text-slate-500 text-sm leading-relaxed whitespace-pre-line">• Integrated Odoo with Shopify and WooCommerce using custom synchronization scripts for seamless bidirectional data flow of orders, inventory, and customers.
 • Optimized Django-based applications by resolving performance bottlenecks through query tuning and caching, improving response times and stability.
 • Developed and maintained custom Odoo modules for sales, logistics, and inventory management in eCommerce operations.</p>
                     </div>
@@ -258,38 +258,38 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             
             <div class="reveal relative mb-10 md:mb-12 md:flex md:items-center md:flex-row-reverse">
                 <!-- node -->
-                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-ink-900 z-10"></span>
+                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-white z-10"></span>
                 <!-- spacer (desktop) -->
                 <div class="hidden md:block md:w-1/2"></div>
                 <!-- card -->
                 <div class="ml-12 md:ml-0 md:w-1/2 md:px-8">
                     <div class="card rounded-2xl p-5 sm:p-6">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-300 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Aug 2022 – Aug 2023</span>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-700 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Aug 2022 – Aug 2023</span>
                             
                         </div>
-                        <h4 class="font-semibold text-white text-lg">Odoo Developer</h4>
-                        <p class="text-magenta-300 text-sm font-medium">KK Networks <span class="text-slate-500">· Lahore, Pakistan</span></p>
-                        <p class="mt-3 text-slate-400 text-sm leading-relaxed whitespace-pre-line">• Optimized enterprise ERP systems through custom Odoo development, resolving complex client requirements and ensuring 100% alignment with business-critical workflows.</p>
+                        <h4 class="font-semibold text-slate-900 text-lg">Odoo Developer</h4>
+                        <p class="text-magenta-700 text-sm font-medium">KK Networks <span class="text-slate-500">· Lahore, Pakistan</span></p>
+                        <p class="mt-3 text-slate-500 text-sm leading-relaxed whitespace-pre-line">• Optimized enterprise ERP systems through custom Odoo development, resolving complex client requirements and ensuring 100% alignment with business-critical workflows.</p>
                     </div>
                 </div>
             </div>
             
             <div class="reveal relative mb-10 md:mb-12 md:flex md:items-center ">
                 <!-- node -->
-                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-ink-900 z-10"></span>
+                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-white z-10"></span>
                 <!-- spacer (desktop) -->
                 <div class="hidden md:block md:w-1/2"></div>
                 <!-- card -->
                 <div class="ml-12 md:ml-0 md:w-1/2 md:px-8">
                     <div class="card rounded-2xl p-5 sm:p-6">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-300 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Sep 2020 – Aug 2022</span>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-700 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Sep 2020 – Aug 2022</span>
                             
                         </div>
-                        <h4 class="font-semibold text-white text-lg">Associate Odoo Developer</h4>
-                        <p class="text-magenta-300 text-sm font-medium">GlobalXS Technology Solutions <span class="text-slate-500">· Lahore, Pakistan</span></p>
-                        <p class="mt-3 text-slate-400 text-sm leading-relaxed whitespace-pre-line">• Developed and deployed custom Odoo ERP modules, translating complex business requirements into scalable solutions.
+                        <h4 class="font-semibold text-slate-900 text-lg">Associate Odoo Developer</h4>
+                        <p class="text-magenta-700 text-sm font-medium">GlobalXS Technology Solutions <span class="text-slate-500">· Lahore, Pakistan</span></p>
+                        <p class="mt-3 text-slate-500 text-sm leading-relaxed whitespace-pre-line">• Developed and deployed custom Odoo ERP modules, translating complex business requirements into scalable solutions.
 • Built Odoo portals for Campus Management and external stakeholders, streamlining workflows and improving engagement.
 • Leveraged Python, XML, and the Odoo ORM to create custom models, views, and automated reporting.</p>
                     </div>
@@ -298,38 +298,38 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             
             <div class="reveal relative mb-10 md:mb-12 md:flex md:items-center md:flex-row-reverse">
                 <!-- node -->
-                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-ink-900 z-10"></span>
+                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-white z-10"></span>
                 <!-- spacer (desktop) -->
                 <div class="hidden md:block md:w-1/2"></div>
                 <!-- card -->
                 <div class="ml-12 md:ml-0 md:w-1/2 md:px-8">
                     <div class="card rounded-2xl p-5 sm:p-6">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-300 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Feb 2019 – Sep 2020</span>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-700 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Feb 2019 – Sep 2020</span>
                             
                         </div>
-                        <h4 class="font-semibold text-white text-lg">ERP Trainee</h4>
-                        <p class="text-magenta-300 text-sm font-medium">Scarlet IT Systems <span class="text-slate-500">· Lahore, Pakistan</span></p>
-                        <p class="mt-3 text-slate-400 text-sm leading-relaxed whitespace-pre-line">• Worked on creating Oracle reports and Oracle installation.</p>
+                        <h4 class="font-semibold text-slate-900 text-lg">ERP Trainee</h4>
+                        <p class="text-magenta-700 text-sm font-medium">Scarlet IT Systems <span class="text-slate-500">· Lahore, Pakistan</span></p>
+                        <p class="mt-3 text-slate-500 text-sm leading-relaxed whitespace-pre-line">• Worked on creating Oracle reports and Oracle installation.</p>
                     </div>
                 </div>
             </div>
             
             <div class="reveal relative mb-10 md:mb-12 md:flex md:items-center ">
                 <!-- node -->
-                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-ink-900 z-10"></span>
+                <span class="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-magenta-500 ring-4 ring-white z-10"></span>
                 <!-- spacer (desktop) -->
                 <div class="hidden md:block md:w-1/2"></div>
                 <!-- card -->
                 <div class="ml-12 md:ml-0 md:w-1/2 md:px-8">
                     <div class="card rounded-2xl p-5 sm:p-6">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-300 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Jun 2017 – Sep 2017</span>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-indigo-700 bg-indigo-500/10 border border-indigo-500/25 rounded-full px-3 py-1">Jun 2017 – Sep 2017</span>
                             
                         </div>
-                        <h4 class="font-semibold text-white text-lg">QA / Software Testing Intern</h4>
-                        <p class="text-magenta-300 text-sm font-medium">Softronic Systems <span class="text-slate-500">· Karachi, Pakistan</span></p>
-                        <p class="mt-3 text-slate-400 text-sm leading-relaxed whitespace-pre-line">• Conducted manual and automated testing using Selenium IDE to ensure high-quality software releases.
+                        <h4 class="font-semibold text-slate-900 text-lg">QA / Software Testing Intern</h4>
+                        <p class="text-magenta-700 text-sm font-medium">Softronic Systems <span class="text-slate-500">· Karachi, Pakistan</span></p>
+                        <p class="mt-3 text-slate-500 text-sm leading-relaxed whitespace-pre-line">• Conducted manual and automated testing using Selenium IDE to ensure high-quality software releases.
 • Identified, documented, and tracked defects, collaborating with development teams for timely resolutions.
 • Applied QA methodologies to validate functionality, performance, and user experience for web applications.</p>
                     </div>
@@ -341,10 +341,10 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
 </section>
 
 
-<section id="education" class="py-24 px-4 sm:px-6 bg-ink-800/40 border-y border-ink-600">
+<section id="education" class="py-24 px-4 sm:px-6 bg-slate-50 border-y border-slate-200">
     <div class="max-w-5xl mx-auto">
         <div class="text-center">
-            <p class="reveal text-sm font-semibold tracking-widest uppercase text-magenta-400">Academic Background</p>
+            <p class="reveal text-sm font-semibold tracking-widest uppercase text-magenta-600">Academic Background</p>
             <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mt-2">My <span class="text-gradient">Education</span></h2>
             <div class="reveal heading-rule mx-auto mt-4 mb-16"></div>
         </div>
@@ -355,11 +355,11 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
                 <div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-magenta-500/10 blur-2xl"></div>
                 <div class="relative">
                     <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-magenta-500/20 to-indigo-500/20 border border-magenta-500/30 flex items-center justify-center mb-4">
-                        <svg class="w-7 h-7 text-magenta-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12 12 0 0112 21a12 12 0 01-6.16-10.42L12 14z"/></svg>
+                        <svg class="w-7 h-7 text-magenta-700" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12 12 0 0112 21a12 12 0 01-6.16-10.42L12 14z"/></svg>
                     </div>
-                    <span class="inline-block text-xs font-semibold tracking-wide text-magenta-300 bg-magenta-500/10 border border-magenta-500/25 rounded-full px-3 py-1 mb-3">2014 – 2018</span>
-                    <h4 class="font-semibold text-white leading-snug">Bachelor&#x27;s Degree in Computer Engineering</h4>
-                    <p class="text-slate-400 text-sm mt-1.5">Bahria University</p>
+                    <span class="inline-block text-xs font-semibold tracking-wide text-magenta-700 bg-magenta-500/10 border border-magenta-500/25 rounded-full px-3 py-1 mb-3">2014 – 2018</span>
+                    <h4 class="font-semibold text-slate-900 leading-snug">Bachelor&#x27;s Degree in Computer Engineering</h4>
+                    <p class="text-slate-500 text-sm mt-1.5">Bahria University</p>
                     <p class="text-slate-500 text-xs mt-0.5">Karachi, Pakistan</p>
                 </div>
             </div>
@@ -368,11 +368,11 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
                 <div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-magenta-500/10 blur-2xl"></div>
                 <div class="relative">
                     <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-magenta-500/20 to-indigo-500/20 border border-magenta-500/30 flex items-center justify-center mb-4">
-                        <svg class="w-7 h-7 text-magenta-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12 12 0 0112 21a12 12 0 01-6.16-10.42L12 14z"/></svg>
+                        <svg class="w-7 h-7 text-magenta-700" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12 12 0 0112 21a12 12 0 01-6.16-10.42L12 14z"/></svg>
                     </div>
-                    <span class="inline-block text-xs font-semibold tracking-wide text-magenta-300 bg-magenta-500/10 border border-magenta-500/25 rounded-full px-3 py-1 mb-3">2011 – 2013</span>
-                    <h4 class="font-semibold text-white leading-snug">Intermediate in Pre-Engineering</h4>
-                    <p class="text-slate-400 text-sm mt-1.5">SM Govt. Science College</p>
+                    <span class="inline-block text-xs font-semibold tracking-wide text-magenta-700 bg-magenta-500/10 border border-magenta-500/25 rounded-full px-3 py-1 mb-3">2011 – 2013</span>
+                    <h4 class="font-semibold text-slate-900 leading-snug">Intermediate in Pre-Engineering</h4>
+                    <p class="text-slate-500 text-sm mt-1.5">SM Govt. Science College</p>
                     <p class="text-slate-500 text-xs mt-0.5">Karachi, Pakistan</p>
                 </div>
             </div>
@@ -381,11 +381,11 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
                 <div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-magenta-500/10 blur-2xl"></div>
                 <div class="relative">
                     <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-magenta-500/20 to-indigo-500/20 border border-magenta-500/30 flex items-center justify-center mb-4">
-                        <svg class="w-7 h-7 text-magenta-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12 12 0 0112 21a12 12 0 01-6.16-10.42L12 14z"/></svg>
+                        <svg class="w-7 h-7 text-magenta-700" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12 12 0 0112 21a12 12 0 01-6.16-10.42L12 14z"/></svg>
                     </div>
-                    <span class="inline-block text-xs font-semibold tracking-wide text-magenta-300 bg-magenta-500/10 border border-magenta-500/25 rounded-full px-3 py-1 mb-3">2009 – 2011</span>
-                    <h4 class="font-semibold text-white leading-snug">Matriculation in Computer Science</h4>
-                    <p class="text-slate-400 text-sm mt-1.5">Happy Palace Grammar School</p>
+                    <span class="inline-block text-xs font-semibold tracking-wide text-magenta-700 bg-magenta-500/10 border border-magenta-500/25 rounded-full px-3 py-1 mb-3">2009 – 2011</span>
+                    <h4 class="font-semibold text-slate-900 leading-snug">Matriculation in Computer Science</h4>
+                    <p class="text-slate-500 text-sm mt-1.5">Happy Palace Grammar School</p>
                     <p class="text-slate-500 text-xs mt-0.5">Karachi, Pakistan</p>
                 </div>
             </div>
@@ -398,7 +398,7 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
 <section id="achievements" class="py-24 px-4 sm:px-6">
     <div class="max-w-5xl mx-auto">
         <div class="text-center">
-            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-400">Highlights</p>
+            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-600">Highlights</p>
             <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mt-2">Key <span class="text-gradient">Achievements</span></h2>
             <div class="reveal heading-rule mx-auto mt-4 mb-14"></div>
         </div>
@@ -408,32 +408,32 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             <div class="reveal  card rounded-2xl p-6 flex items-start gap-4">
                 <div class="w-12 h-12 shrink-0 rounded-xl bg-indigo-500/15 border-indigo-500/30 border flex items-center justify-center text-2xl">🏆</div>
                 <div>
-                    <h4 class="font-semibold text-white">Enterprise ERP Deployments</h4>
-                    <p class="text-slate-400 text-sm mt-1 leading-relaxed">Led end-to-end Odoo ERP customization &amp; deployment for high-profile ISP/Telecom and Retail clients.</p>
+                    <h4 class="font-semibold text-slate-900">Enterprise ERP Deployments</h4>
+                    <p class="text-slate-500 text-sm mt-1 leading-relaxed">Led end-to-end Odoo ERP customization &amp; deployment for high-profile ISP/Telecom and Retail clients.</p>
                 </div>
             </div>
             
             <div class="reveal d1 card rounded-2xl p-6 flex items-start gap-4">
                 <div class="w-12 h-12 shrink-0 rounded-xl bg-magenta-500/15 border-magenta-500/30 border flex items-center justify-center text-2xl">👥</div>
                 <div>
-                    <h4 class="font-semibold text-white">Team Lead &amp; Mentor</h4>
-                    <p class="text-slate-400 text-sm mt-1 leading-relaxed">Acted as Senior Developer / Team Lead — mentoring developers and ensuring on-time project delivery.</p>
+                    <h4 class="font-semibold text-slate-900">Team Lead &amp; Mentor</h4>
+                    <p class="text-slate-500 text-sm mt-1 leading-relaxed">Acted as Senior Developer / Team Lead — mentoring developers and ensuring on-time project delivery.</p>
                 </div>
             </div>
             
             <div class="reveal  card rounded-2xl p-6 flex items-start gap-4">
                 <div class="w-12 h-12 shrink-0 rounded-xl bg-indigo-500/15 border-indigo-500/30 border flex items-center justify-center text-2xl">🔗</div>
                 <div>
-                    <h4 class="font-semibold text-white">eCommerce Integrations</h4>
-                    <p class="text-slate-400 text-sm mt-1 leading-relaxed">Built seamless Shopify &amp; WooCommerce ↔ Odoo synchronization for orders, inventory and customers.</p>
+                    <h4 class="font-semibold text-slate-900">eCommerce Integrations</h4>
+                    <p class="text-slate-500 text-sm mt-1 leading-relaxed">Built seamless Shopify &amp; WooCommerce ↔ Odoo synchronization for orders, inventory and customers.</p>
                 </div>
             </div>
             
             <div class="reveal d1 card rounded-2xl p-6 flex items-start gap-4">
                 <div class="w-12 h-12 shrink-0 rounded-xl bg-magenta-500/15 border-magenta-500/30 border flex items-center justify-center text-2xl">🎓</div>
                 <div>
-                    <h4 class="font-semibold text-white">Computer Engineering Graduate</h4>
-                    <p class="text-slate-400 text-sm mt-1 leading-relaxed">Bachelor&#x27;s Degree in Computer Engineering from Bahria University, Karachi.</p>
+                    <h4 class="font-semibold text-slate-900">Computer Engineering Graduate</h4>
+                    <p class="text-slate-500 text-sm mt-1 leading-relaxed">Bachelor&#x27;s Degree in Computer Engineering from Bahria University, Karachi.</p>
                 </div>
             </div>
             
@@ -458,11 +458,11 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
                     
                 </div>
                 <div class="p-6 flex flex-col flex-1">
-                    <h3 class="font-semibold text-lg text-white">ISP Customer Relationship Management (CRM)</h3>
-                    <p class="mt-2 text-slate-400 text-sm flex-1 leading-relaxed">A centralized platform for managing subscriber lifecycles, billing cycles, and service provisioning for ISP/Telecom operators.</p>
+                    <h3 class="font-semibold text-lg text-slate-900">ISP Customer Relationship Management (CRM)</h3>
+                    <p class="mt-2 text-slate-500 text-sm flex-1 leading-relaxed">A centralized platform for managing subscriber lifecycles, billing cycles, and service provisioning for ISP/Telecom operators.</p>
                     
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">Odoo</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">Python</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">PostgreSQL</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">XML</span>
+                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">Odoo</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">Python</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">PostgreSQL</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">XML</span>
                     </div>
                     
                     
@@ -476,11 +476,11 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
                     
                 </div>
                 <div class="p-6 flex flex-col flex-1">
-                    <h3 class="font-semibold text-lg text-white">ISP Helpdesk Management</h3>
-                    <p class="mt-2 text-slate-400 text-sm flex-1 leading-relaxed">An automated ticketing solution designed to streamline technical support workflows and field technician assignments.</p>
+                    <h3 class="font-semibold text-lg text-slate-900">ISP Helpdesk Management</h3>
+                    <p class="mt-2 text-slate-500 text-sm flex-1 leading-relaxed">An automated ticketing solution designed to streamline technical support workflows and field technician assignments.</p>
                     
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">Odoo</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">Python</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">PostgreSQL</span>
+                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">Odoo</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">Python</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">PostgreSQL</span>
                     </div>
                     
                     
@@ -494,11 +494,11 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
                     
                 </div>
                 <div class="p-6 flex flex-col flex-1">
-                    <h3 class="font-semibold text-lg text-white">HR Management System</h3>
-                    <p class="mt-2 text-slate-400 text-sm flex-1 leading-relaxed">A comprehensive tool for managing employee records, payroll, time-off, overtime, attendance, and performance evaluations.</p>
+                    <h3 class="font-semibold text-lg text-slate-900">HR Management System</h3>
+                    <p class="mt-2 text-slate-500 text-sm flex-1 leading-relaxed">A comprehensive tool for managing employee records, payroll, time-off, overtime, attendance, and performance evaluations.</p>
                     
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">Odoo</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">Python</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/20">PostgreSQL</span>
+                        <span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">Odoo</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">Python</span><span class="text-xs font-medium bg-indigo-500/10 text-indigo-700 px-2.5 py-1 rounded-full border border-indigo-500/20">PostgreSQL</span>
                     </div>
                     
                     
@@ -510,10 +510,10 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
 </section>
 
 
-<section id="skills" class="py-24 px-4 sm:px-6 bg-ink-800/40 border-y border-ink-600">
+<section id="skills" class="py-24 px-4 sm:px-6 bg-slate-50 border-y border-slate-200">
     <div class="max-w-5xl mx-auto">
         <div class="text-center">
-            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-400">What I Work With</p>
+            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-600">What I Work With</p>
             <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mt-2">Skills &amp; <span class="text-gradient">Tools</span></h2>
             <div class="reveal heading-rule mx-auto mt-4 mb-14"></div>
         </div>
@@ -522,61 +522,61 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             
             <div class="reveal  card rounded-2xl p-6">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-magenta-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-300">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-magenta-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-700">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 8l-4 4 4 4m10-8l4 4-4 4M14 4l-4 16"/></svg>
                         
                     </div>
-                    <h3 class="font-display font-semibold text-white">Programming Languages</h3>
-                    <span class="ml-auto text-xs font-medium text-slate-500 bg-ink-700 rounded-full px-2.5 py-1">5</span>
+                    <h3 class="font-display font-semibold text-slate-900">Programming Languages</h3>
+                    <span class="ml-auto text-xs font-medium text-slate-500 bg-slate-100 rounded-full px-2.5 py-1">5</span>
                 </div>
                 <div class="space-y-4">
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">Python</span>
+                            <span class="text-sm font-medium text-slate-700">Python</span>
                             <span class="text-xs text-slate-500">95%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="95%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">XML</span>
+                            <span class="text-sm font-medium text-slate-700">XML</span>
                             <span class="text-xs text-slate-500">90%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="90%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">JavaScript</span>
+                            <span class="text-sm font-medium text-slate-700">JavaScript</span>
                             <span class="text-xs text-slate-500">80%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="80%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">HTML</span>
+                            <span class="text-sm font-medium text-slate-700">HTML</span>
                             <span class="text-xs text-slate-500">85%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="85%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">CSS</span>
+                            <span class="text-sm font-medium text-slate-700">CSS</span>
                             <span class="text-xs text-slate-500">85%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="85%" style="width: 0"></div>
                         </div>
                     </div>
@@ -586,51 +586,51 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             
             <div class="reveal d1 card rounded-2xl p-6">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-magenta-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-300">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-magenta-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-700">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2l9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></svg>
                         
                     </div>
-                    <h3 class="font-display font-semibold text-white">Frameworks &amp; Libraries</h3>
-                    <span class="ml-auto text-xs font-medium text-slate-500 bg-ink-700 rounded-full px-2.5 py-1">4</span>
+                    <h3 class="font-display font-semibold text-slate-900">Frameworks &amp; Libraries</h3>
+                    <span class="ml-auto text-xs font-medium text-slate-500 bg-slate-100 rounded-full px-2.5 py-1">4</span>
                 </div>
                 <div class="space-y-4">
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">Odoo (Enterprise &amp; Community)</span>
+                            <span class="text-sm font-medium text-slate-700">Odoo (Enterprise &amp; Community)</span>
                             <span class="text-xs text-slate-500">95%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="95%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">Django</span>
+                            <span class="text-sm font-medium text-slate-700">Django</span>
                             <span class="text-xs text-slate-500">90%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="90%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">Django REST Framework</span>
+                            <span class="text-sm font-medium text-slate-700">Django REST Framework</span>
                             <span class="text-xs text-slate-500">85%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="85%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">FastAPI</span>
+                            <span class="text-sm font-medium text-slate-700">FastAPI</span>
                             <span class="text-xs text-slate-500">80%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="80%" style="width: 0"></div>
                         </div>
                     </div>
@@ -640,31 +640,31 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             
             <div class="reveal  card rounded-2xl p-6">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-magenta-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-300">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-magenta-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-700">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
                         
                     </div>
-                    <h3 class="font-display font-semibold text-white">Databases &amp; Tools</h3>
-                    <span class="ml-auto text-xs font-medium text-slate-500 bg-ink-700 rounded-full px-2.5 py-1">2</span>
+                    <h3 class="font-display font-semibold text-slate-900">Databases &amp; Tools</h3>
+                    <span class="ml-auto text-xs font-medium text-slate-500 bg-slate-100 rounded-full px-2.5 py-1">2</span>
                 </div>
                 <div class="space-y-4">
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">PostgreSQL</span>
+                            <span class="text-sm font-medium text-slate-700">PostgreSQL</span>
                             <span class="text-xs text-slate-500">90%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="90%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">MySQL</span>
+                            <span class="text-sm font-medium text-slate-700">MySQL</span>
                             <span class="text-xs text-slate-500">80%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="80%" style="width: 0"></div>
                         </div>
                     </div>
@@ -674,31 +674,31 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             
             <div class="reveal d1 card rounded-2xl p-6">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-magenta-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-300">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-magenta-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-700">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 01-13 8l-5 1 1-5a9 9 0 1117-4z"/></svg>
                         
                     </div>
-                    <h3 class="font-display font-semibold text-white">Languages &amp; Soft Skills</h3>
-                    <span class="ml-auto text-xs font-medium text-slate-500 bg-ink-700 rounded-full px-2.5 py-1">2</span>
+                    <h3 class="font-display font-semibold text-slate-900">Languages &amp; Soft Skills</h3>
+                    <span class="ml-auto text-xs font-medium text-slate-500 bg-slate-100 rounded-full px-2.5 py-1">2</span>
                 </div>
                 <div class="space-y-4">
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">English</span>
+                            <span class="text-sm font-medium text-slate-700">English</span>
                             <span class="text-xs text-slate-500">90%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="90%" style="width: 0"></div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="flex justify-between mb-1.5">
-                            <span class="text-sm font-medium text-slate-200">Urdu</span>
+                            <span class="text-sm font-medium text-slate-700">Urdu</span>
                             <span class="text-xs text-slate-500">100%</span>
                         </div>
-                        <div class="h-1.5 bg-ink-600 rounded-full overflow-hidden">
+                        <div class="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                             <div class="skill-bar h-full rounded-full bg-gradient-to-r from-indigo-500 to-magenta-500" data-width="100%" style="width: 0"></div>
                         </div>
                     </div>
@@ -714,10 +714,10 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
 <section id="tech" class="py-24 px-4 sm:px-6">
     <div class="max-w-5xl mx-auto">
         <div class="text-center">
-            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-400">Behind the Scenes</p>
+            <p class="reveal text-sm font-semibold tracking-widest uppercase text-indigo-600">Behind the Scenes</p>
             <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mt-2">Built <span class="text-gradient">With</span></h2>
             <div class="reveal heading-rule mx-auto mt-4 mb-4"></div>
-            <p class="reveal d1 text-slate-400 max-w-xl mx-auto mb-14">The technologies and tools that power this portfolio.</p>
+            <p class="reveal d1 text-slate-500 max-w-xl mx-auto mb-14">The technologies and tools that power this portfolio.</p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -725,16 +725,16 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             <div class="reveal card rounded-2xl p-6">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 6h14M5 18h14"/></svg>
+                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 6h14M5 18h14"/></svg>
                     </div>
-                    <h3 class="font-semibold text-white">Backend</h3>
+                    <h3 class="font-semibold text-slate-900">Backend</h3>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">Python 3.11</span>
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">Django 5.1</span>
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">PostgreSQL</span>
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">psycopg 3</span>
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">Pillow</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">Python 3.11</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">Django 5.1</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">PostgreSQL</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">psycopg 3</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">Pillow</span>
                 </div>
             </div>
 
@@ -742,16 +742,16 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             <div class="reveal d1 card rounded-2xl p-6">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-10 h-10 rounded-xl bg-magenta-500/15 border border-magenta-500/30 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-magenta-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 8l-4 4 4 4m10-8l4 4-4 4M14 4l-4 16"/></svg>
+                        <svg class="w-5 h-5 text-magenta-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 8l-4 4 4 4m10-8l4 4-4 4M14 4l-4 16"/></svg>
                     </div>
-                    <h3 class="font-semibold text-white">Frontend</h3>
+                    <h3 class="font-semibold text-slate-900">Frontend</h3>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-300 px-3 py-1.5 rounded-full border border-magenta-500/20">Tailwind CSS</span>
-                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-300 px-3 py-1.5 rounded-full border border-magenta-500/20">JavaScript</span>
-                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-300 px-3 py-1.5 rounded-full border border-magenta-500/20">Alpine.js</span>
-                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-300 px-3 py-1.5 rounded-full border border-magenta-500/20">Custom CSS</span>
-                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-300 px-3 py-1.5 rounded-full border border-magenta-500/20">HTML5</span>
+                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-700 px-3 py-1.5 rounded-full border border-magenta-500/20">Tailwind CSS</span>
+                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-700 px-3 py-1.5 rounded-full border border-magenta-500/20">JavaScript</span>
+                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-700 px-3 py-1.5 rounded-full border border-magenta-500/20">Alpine.js</span>
+                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-700 px-3 py-1.5 rounded-full border border-magenta-500/20">Custom CSS</span>
+                    <span class="text-sm font-medium bg-magenta-500/10 text-magenta-700 px-3 py-1.5 rounded-full border border-magenta-500/20">HTML5</span>
                 </div>
             </div>
 
@@ -759,16 +759,16 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
             <div class="reveal d2 card rounded-2xl p-6">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.3 4.3a4 4 0 105.4 5.4L20 14l-2 2-4.3-4.3a4 4 0 01-5.4-5.4L10 6 8 8 5 5l2-2 3.3 1.3z"/></svg>
+                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.3 4.3a4 4 0 105.4 5.4L20 14l-2 2-4.3-4.3a4 4 0 01-5.4-5.4L10 6 8 8 5 5l2-2 3.3 1.3z"/></svg>
                     </div>
-                    <h3 class="font-semibold text-white">Tools &amp; Platform</h3>
+                    <h3 class="font-semibold text-slate-900">Tools &amp; Platform</h3>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">Django Admin</span>
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">Custom Dashboard</span>
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">Git</span>
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">venv</span>
-                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-300 px-3 py-1.5 rounded-full border border-indigo-500/20">Linux</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">Django Admin</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">Custom Dashboard</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">Git</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">venv</span>
+                    <span class="text-sm font-medium bg-indigo-500/10 text-indigo-700 px-3 py-1.5 rounded-full border border-indigo-500/20">Linux</span>
                 </div>
             </div>
         </div>
@@ -781,32 +781,32 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
         <div class="text-center">
             <h2 class="reveal font-display text-3xl sm:text-4xl font-bold">Get In <span class="text-gradient">Touch</span></h2>
             <div class="reveal heading-rule mx-auto mt-4 mb-6"></div>
-            <p class="reveal d1 text-slate-400 mb-10">Have a question or want to work together? Drop me a message.</p>
+            <p class="reveal d1 text-slate-500 mb-10">Have a question or want to work together? Drop me a message.</p>
         </div>
 
         
 
         <form method="post" action="/#contact" class="reveal d1 space-y-5 glass rounded-2xl p-6 sm:p-8">
-            <input type="hidden" name="csrfmiddlewaretoken" value="vtvEKZqdLmYGj6PFsUqVoKKdWeabGK8BlfY3zBK6NVAtGpQ8Am7YTVLaiqtm50Pg">
+            <input type="hidden" name="csrfmiddlewaretoken" value="5ZawILPo5ApCc5G6uZSlShAzD8NYBUlAN7Ni9LVniGWl3bJnaGer6OJ9j7vp9R6I">
             <div class="grid sm:grid-cols-2 gap-5">
                 <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-1.5" for="id_name">Name</label>
-                    <input type="text" name="name" id="id_name" required value="" class="w-full rounded-xl bg-ink-700/60 border border-ink-600 px-4 py-2.5 text-white placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
+                    <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_name">Name</label>
+                    <input type="text" name="name" id="id_name" required value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
                     
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-1.5" for="id_email">Email</label>
-                    <input type="email" name="email" id="id_email" required value="" class="w-full rounded-xl bg-ink-700/60 border border-ink-600 px-4 py-2.5 text-white placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
+                    <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_email">Email</label>
+                    <input type="email" name="email" id="id_email" required value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
                     
                 </div>
             </div>
             <div>
-                <label class="block text-sm font-medium text-slate-300 mb-1.5" for="id_subject">Subject</label>
-                <input type="text" name="subject" id="id_subject" value="" class="w-full rounded-xl bg-ink-700/60 border border-ink-600 px-4 py-2.5 text-white placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
+                <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_subject">Subject</label>
+                <input type="text" name="subject" id="id_subject" value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
             </div>
             <div>
-                <label class="block text-sm font-medium text-slate-300 mb-1.5" for="id_message">Message</label>
-                <textarea name="message" id="id_message" rows="5" required class="w-full rounded-xl bg-ink-700/60 border border-ink-600 px-4 py-2.5 text-white placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition"></textarea>
+                <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_message">Message</label>
+                <textarea name="message" id="id_message" rows="5" required class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition"></textarea>
                 
             </div>
             <button type="submit" class="w-full py-3 rounded-full font-semibold text-white bg-gradient-to-r from-indigo-500 to-magenta-500 hover:opacity-90 shadow-lg shadow-indigo-500/30 transition">Send Message</button>
@@ -817,7 +817,7 @@ As a team lead and senior developer, I mentor engineers, optimise application pe
 
     </main>
 
-    <footer class="border-t border-ink-600 py-10 text-center text-sm text-slate-500">
+    <footer class="border-t border-slate-200 py-10 text-center text-sm text-slate-500">
         <img src="static/img/logo.png" alt="logo" class="h-12 w-auto mx-auto mb-3 opacity-90">
         <p>&copy; 2026 Danish Khalid. All rights reserved.</p>
     </footer>

@@ -4,15 +4,15 @@
    =========================================================== */
 
 :root {
-    --bg:        #0d1f38;   /* deep brand blue-navy       */
-    --bg-soft:   #142a48;   /* slightly lifted panels     */
-    --bg-card:   #173255;   /* cards                      */
-    --line:      #284a73;   /* hairline borders           */
-    --text:      #eef2fb;   /* primary text               */
-    --muted:     #a8b6d4;   /* secondary text             */
-    --indigo:    #60a5fa;   /* brand blue accent          */
-    --indigo-600:#2563eb;
-    --magenta:   #38bdf8;   /* sky accent                 */
+    --bg:        #f4f7fc;   /* soft white (light theme)   */
+    --bg-soft:   #ffffff;   /* white panels               */
+    --bg-card:   #ffffff;   /* white cards                */
+    --line:      #dce4f0;   /* light borders              */
+    --text:      #0f1d33;   /* dark navy text             */
+    --muted:     #5b6b86;   /* muted text                 */
+    --indigo:    #2563eb;   /* brand blue accent          */
+    --indigo-600:#1d4ed8;
+    --magenta:   #0ea5e9;   /* sky accent                 */
     --magenta-600:#0284c7;
 }
 
@@ -20,8 +20,8 @@ html { scroll-behavior: smooth; }
 
 body {
     background:
-        radial-gradient(900px 600px at 15% -10%, rgba(59,130,246,.16), transparent 60%),
-        radial-gradient(800px 600px at 100% 10%, rgba(56,189,248,.14), transparent 55%),
+        radial-gradient(900px 600px at 15% -10%, rgba(37,99,235,.08), transparent 60%),
+        radial-gradient(800px 600px at 100% 10%, rgba(14,165,233,.07), transparent 55%),
         var(--bg);
     color: var(--text);
 }
@@ -88,7 +88,7 @@ body {
 /* Name — continuous flowing colour gradient */
 .text-shine {
     background: linear-gradient(110deg,
-        #dbeafe, #60a5fa, #38bdf8, #7dd3fc, #60a5fa, #dbeafe);
+        #1e3a8a, #1d4ed8, #2563eb, #3b82f6, #1d4ed8, #1e3a8a);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -167,28 +167,30 @@ body {
 
 /* ---------- Navbar scroll state ---------- */
 #site-nav.scrolled {
-    background: rgba(13, 31, 56, .88);
+    background: rgba(255, 255, 255, .85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 12px rgba(15, 29, 51, .06);
 }
 
 /* ---------- Glass card ---------- */
 .glass {
-    background: rgba(255, 255, 255, .03);
+    background: rgba(255, 255, 255, .7);
     border: 1px solid var(--line);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 .card {
-    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+    background: #ffffff;
     border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(15,29,51,.04), 0 1px 3px rgba(15,29,51,.06);
     transition: transform .35s cubic-bezier(.2,.7,.3,1), border-color .35s, box-shadow .35s;
 }
 .card:hover {
     transform: translateY(-6px);
-    border-color: rgba(96,165,250,.5);
-    box-shadow: 0 20px 40px -20px rgba(59,130,246,.45);
+    border-color: rgba(37,99,235,.35);
+    box-shadow: 0 18px 40px -16px rgba(37,99,235,.28);
 }
 
 /* ---------- Scroll reveal ---------- */
