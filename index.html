@@ -920,6 +920,9 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
                 <textarea name="message" id="id_message" rows="5" required class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition"></textarea>
                 
             </div>
+            <div class="flex justify-center">
+                <div class="h-captcha" data-captcha="true"></div>
+            </div>
             <button type="submit" class="w-full py-3 rounded-full font-semibold text-white bg-gradient-to-r from-indigo-500 to-magenta-500 hover:opacity-90 shadow-lg shadow-indigo-500/30 transition disabled:opacity-60 disabled:cursor-not-allowed">Send Message</button>
             <p id="form-status" class="hidden text-sm text-center rounded-xl px-4 py-3 border" role="status" aria-live="polite"></p>
         </form>
@@ -962,8 +965,20 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
       : 'text-rose-700 bg-rose-500/10 border-rose-500/30');
   }
 
+  function resetCaptcha() {
+    if (window.hcaptcha && typeof window.hcaptcha.reset === 'function') {
+      try { window.hcaptcha.reset(); } catch (err) {}
+    }
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+
+    var captcha = form.querySelector('[name="h-captcha-response"]');
+    if (captcha && !String(captcha.value || '').trim()) {
+      show('Please complete the captcha below before sending.', false);
+      return;
+    }
 
     var data = new FormData(form);
     if (!String(data.get('subject') || '').trim()) {
@@ -994,11 +1009,13 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
         show('Network error. Please email engr.danishkhalid@gmail.com directly.', false);
       })
       .then(function () {
+        resetCaptcha();
         button.disabled = false;
         button.textContent = label;
       });
   });
 })();
 </script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
