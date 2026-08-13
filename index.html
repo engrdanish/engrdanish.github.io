@@ -894,8 +894,11 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
 
         
 
-        <form method="post" action="/#contact" class="reveal d1 space-y-5 glass rounded-2xl p-6 sm:p-8">
-            <input type="hidden" name="csrfmiddlewaretoken" value="tIZnJfaGRqjjQAGpejNi75DsOclrae6yeyqHAKnKDQCaMgpumQlRE6clH2bzF42y">
+        <form id="contact-form" method="post" action="https://api.web3forms.com/submit" class="reveal d1 space-y-5 glass rounded-2xl p-6 sm:p-8">
+            <input type="hidden" name="access_key" value="4f2faba2-aed9-487a-ad9e-e3eece735f88">
+            <input type="hidden" name="from_name" value="Portfolio — engrdanish.github.io">
+            <input type="hidden" name="replyto" value="@">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
             <div class="grid sm:grid-cols-2 gap-5">
                 <div>
                     <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_name">Name</label>
@@ -917,7 +920,8 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
                 <textarea name="message" id="id_message" rows="5" required class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition"></textarea>
                 
             </div>
-            <button type="submit" class="w-full py-3 rounded-full font-semibold text-white bg-gradient-to-r from-indigo-500 to-magenta-500 hover:opacity-90 shadow-lg shadow-indigo-500/30 transition">Send Message</button>
+            <button type="submit" class="w-full py-3 rounded-full font-semibold text-white bg-gradient-to-r from-indigo-500 to-magenta-500 hover:opacity-90 shadow-lg shadow-indigo-500/30 transition disabled:opacity-60 disabled:cursor-not-allowed">Send Message</button>
+            <p id="form-status" class="hidden text-sm text-center rounded-xl px-4 py-3 border" role="status" aria-live="polite"></p>
         </form>
     </div>
 </section>
@@ -944,15 +948,55 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
 
 <script>
 (function () {
-  var form = document.querySelector('#contact form');
+  var form = document.getElementById('contact-form');
   if (!form) return;
-  form.setAttribute('action', '#contact');
+
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var label = button.textContent;
+
+  function show(message, ok) {
+    status.textContent = message;
+    status.className = 'text-sm text-center rounded-xl px-4 py-3 border ' + (ok
+      ? 'text-emerald-700 bg-emerald-500/10 border-emerald-500/30'
+      : 'text-rose-700 bg-rose-500/10 border-rose-500/30');
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var d = new FormData(form);
-    var s = encodeURIComponent(d.get('subject') || 'Portfolio enquiry');
-    var b = encodeURIComponent('Name: '+(d.get('name')||'')+String.fromCharCode(10)+'Email: '+(d.get('email')||'')+String.fromCharCode(10)+String.fromCharCode(10)+(d.get('message')||''));
-    window.location.href = 'mailto:engr.danishkhalid@gmail.com?subject='+s+'&body='+b;
+
+    var data = new FormData(form);
+    if (!String(data.get('subject') || '').trim()) {
+      data.set('subject', 'New enquiry from portfolio');
+    }
+
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.className = 'hidden';
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    })
+      .then(function (res) {
+        return res.json().then(function (body) { return { ok: res.ok, body: body }; });
+      })
+      .then(function (result) {
+        if (result.ok && result.body && result.body.success) {
+          form.reset();
+          show('Thanks for reaching out — your message has been sent. I usually reply within a day.', true);
+        } else {
+          show('Message could not be sent. Please email engr.danishkhalid@gmail.com directly.', false);
+        }
+      })
+      .catch(function () {
+        show('Network error. Please email engr.danishkhalid@gmail.com directly.', false);
+      })
+      .then(function () {
+        button.disabled = false;
+        button.textContent = label;
+      });
   });
 })();
 </script>
