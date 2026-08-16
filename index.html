@@ -894,7 +894,7 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
 
         
 
-        <form id="contact-form" method="post" action="https://api.web3forms.com/submit" class="reveal d1 space-y-5 glass rounded-2xl p-6 sm:p-8">
+        <form id="contact-form" method="post" novalidate action="https://api.web3forms.com/submit" class="reveal d1 space-y-5 glass rounded-2xl p-6 sm:p-8">
             <input type="hidden" name="access_key" value="4f2faba2-aed9-487a-ad9e-e3eece735f88">
             <input type="hidden" name="from_name" value="Portfolio — engrdanish.github.io">
             <input type="hidden" name="replyto" value="@">
@@ -902,23 +902,27 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
             <div class="grid sm:grid-cols-2 gap-5">
                 <div>
                     <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_name">Name</label>
-                    <input type="text" name="name" id="id_name" required value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
-                    
+                    <input type="text" name="name" id="id_name" required maxlength="80" autocomplete="name" placeholder="Your full name" value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
+                    <p id="err-name" class="hidden mt-1.5 text-xs text-rose-600"></p>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_email">Email</label>
-                    <input type="email" name="email" id="id_email" required value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
-                    
+                    <input type="email" name="email" id="id_email" required maxlength="120" autocomplete="email" placeholder="you@company.com" value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
+                    <p id="err-email" class="hidden mt-1.5 text-xs text-rose-600"></p>
                 </div>
             </div>
             <div>
-                <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_subject">Subject</label>
-                <input type="text" name="subject" id="id_subject" value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
+                <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_subject">Subject <span class="text-slate-400 font-normal">(optional)</span></label>
+                <input type="text" name="subject" id="id_subject" maxlength="120" placeholder="What is this about?" value="" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition">
+                <p id="err-subject" class="hidden mt-1.5 text-xs text-rose-600"></p>
             </div>
             <div>
-                <label class="block text-sm font-medium text-slate-600 mb-1.5" for="id_message">Message</label>
-                <textarea name="message" id="id_message" rows="5" required class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition"></textarea>
-                
+                <div class="flex items-baseline justify-between mb-1.5">
+                    <label class="block text-sm font-medium text-slate-600" for="id_message">Message</label>
+                    <span id="message-count" class="text-xs text-slate-400">0 / 3000</span>
+                </div>
+                <textarea name="message" id="id_message" rows="5" required maxlength="3000" placeholder="Tell me a bit about your project or question…" class="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-900 placeholder-slate-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 outline-none transition"></textarea>
+                <p id="err-message" class="hidden mt-1.5 text-xs text-rose-600"></p>
             </div>
             <div class="flex justify-center">
                 <div class="h-captcha" data-captcha="true"></div>
@@ -957,12 +961,112 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
   var status = document.getElementById('form-status');
   var button = form.querySelector('button[type="submit"]');
   var label = button.textContent;
+  var counter = document.getElementById('message-count');
+  var fadeTimer = null;
+  var hideTimer = null;
 
-  function show(message, ok) {
+  var rules = {
+    name: function (value) {
+      if (!value) return 'Please enter your name.';
+      if (value.length < 2) return 'Name must be at least 2 characters.';
+      if (!/^[\p{L}][\p{L}\s'’.-]*$/u.test(value)) return 'Name can only contain letters, spaces, hyphens and apostrophes.';
+      return '';
+    },
+    email: function (value) {
+      if (!value) return 'Please enter your email address.';
+      if (!/^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(value)) return 'Please enter a valid email address, e.g. name@company.com.';
+      return '';
+    },
+    subject: function (value) {
+      if (value && value.length > 120) return 'Subject must be 120 characters or less.';
+      return '';
+    },
+    message: function (value) {
+      if (!value) return 'Please write a message.';
+      if (value.length < 10) return 'Message must be at least 10 characters.';
+      if (value.length > 3000) return 'Message must be 3000 characters or less.';
+      return '';
+    }
+  };
+
+  var names = Object.keys(rules);
+
+  function fieldOf(name) { return form.querySelector('[name="' + name + '"]'); }
+
+  function setError(name, message) {
+    var field = fieldOf(name);
+    var box = document.getElementById('err-' + name);
+    if (!field || !box) return;
+    if (message) {
+      box.textContent = message;
+      box.classList.remove('hidden');
+      field.classList.add('input-invalid');
+      field.setAttribute('aria-invalid', 'true');
+      field.setAttribute('aria-describedby', 'err-' + name);
+    } else {
+      box.textContent = '';
+      box.classList.add('hidden');
+      field.classList.remove('input-invalid');
+      field.removeAttribute('aria-invalid');
+      field.removeAttribute('aria-describedby');
+    }
+  }
+
+  function validateField(name) {
+    var field = fieldOf(name);
+    if (!field) return true;
+    var message = rules[name](String(field.value || '').trim());
+    setError(name, message);
+    return !message;
+  }
+
+  function validateAll() {
+    var invalid = null;
+    names.forEach(function (name) {
+      if (!validateField(name) && !invalid) invalid = fieldOf(name);
+    });
+    if (invalid) invalid.focus();
+    return !invalid;
+  }
+
+  function clearErrors() {
+    names.forEach(function (name) { setError(name, ''); });
+  }
+
+  names.forEach(function (name) {
+    var field = fieldOf(name);
+    if (!field) return;
+    field.addEventListener('blur', function () { validateField(name); });
+    field.addEventListener('input', function () {
+      if (field.classList.contains('input-invalid')) validateField(name);
+    });
+  });
+
+  var messageField = fieldOf('message');
+  if (messageField && counter) {
+    messageField.addEventListener('input', function () {
+      counter.textContent = messageField.value.length + ' / 3000';
+    });
+  }
+
+  function hideStatus() {
+    if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = null; }
+    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    status.className = 'hidden';
+  }
+
+  function show(message, ok, autoHide) {
+    hideStatus();
     status.textContent = message;
     status.className = 'text-sm text-center rounded-xl px-4 py-3 border ' + (ok
       ? 'text-emerald-700 bg-emerald-500/10 border-emerald-500/30'
       : 'text-rose-700 bg-rose-500/10 border-rose-500/30');
+    if (autoHide) {
+      fadeTimer = setTimeout(function () {
+        status.classList.add('is-fading');
+        hideTimer = setTimeout(hideStatus, 400);
+      }, 6000);
+    }
   }
 
   function resetCaptcha() {
@@ -973,6 +1077,11 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+
+    if (!validateAll()) {
+      show('Please fix the highlighted fields and try again.', false);
+      return;
+    }
 
     var captcha = form.querySelector('[name="h-captcha-response"]');
     if (captcha && !String(captcha.value || '').trim()) {
@@ -987,7 +1096,7 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
 
     button.disabled = true;
     button.textContent = 'Sending…';
-    status.className = 'hidden';
+    hideStatus();
 
     fetch(form.action, {
       method: 'POST',
@@ -1000,7 +1109,9 @@ Currently leading a team of 6 developers, I own solution design, delivery and cl
       .then(function (result) {
         if (result.ok && result.body && result.body.success) {
           form.reset();
-          show('Thanks for reaching out — your message has been sent. I usually reply within a day.', true);
+          clearErrors();
+          if (counter) counter.textContent = '0 / 3000';
+          show('Thanks for reaching out — your message has been sent. I usually reply within a day.', true, true);
         } else {
           show('Message could not be sent. Please email engr.danishkhalid@gmail.com directly.', false);
         }
