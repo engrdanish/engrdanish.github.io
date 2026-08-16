@@ -137,7 +137,8 @@
 
     /* ---------------- Animated stat counters ---------------- */
     const counters = document.querySelectorAll('.stat-count');
-    if (counters.length && 'IntersectionObserver' in window) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (counters.length && 'IntersectionObserver' in window && !reduceMotion) {
         const runCount = (el) => {
             const target = parseInt(el.dataset.target, 10) || 0;
             const duration = 1400;
